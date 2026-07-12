@@ -584,6 +584,74 @@ here we can see that the contents of the skyworkshop is downloaded
 in order to check what all is present we give the commands as shown in the picture 
 
 
+<img width="803" height="47" alt="image" src="https://github.com/user-attachments/assets/99c68051-6ecc-4ee8-b6cb-1edf7b0a4dd5" />
+
+here we can see the files present in nfet_01v8
+
+
+
+<img width="959" height="521" alt="image" src="https://github.com/user-attachments/assets/57ba11fc-91a7-4a0d-b276-6f9028d2f599" />
+
+these are the model parameters present in nfet
+
+
+
+<img width="950" height="537" alt="image" src="https://github.com/user-attachments/assets/27943d83-3e9c-43ab-8dc7-1641dac822a2" />
+
+the corner spice file contains different W and L values 
+In sky130 technology it has already presetted the w and l values we need to use these W and L values only
+IF WE TAKE VALUES OUTSIDE THIS SET IT WONT SIMULATE 
+
+
+
+<img width="959" height="540" alt="image" src="https://github.com/user-attachments/assets/2363c33f-eb61-4140-9fce-7bf6fd2849da" />
+
+This is the common file for both nfet and pfet at different corners 
+Here we are including corner spice files of both nfet and pfet 
+
+
+
+
+
+Now open the day 1 file 
+
+Here you can see the library file is included and its mentioned as tt(typical corner) if we want to do it at slow fast corner we need to 
+change it to sf 
+
+<img width="956" height="491" alt="image" src="https://github.com/user-attachments/assets/cca15b51-37bd-4801-b5c2-466b7a3b16de" />
+
+
+<img width="956" height="491" alt="image" src="https://github.com/user-attachments/assets/7751cb68-be95-48d7-9ac4-e5f53ce3aa3f" />
+Here this is the model name for nfet_01v8 
+syntax is (drain,gate,source and bulk)
+
+Here we are doing DC simulation of Id vs Vd
+
+<img width="663" height="333" alt="image" src="https://github.com/user-attachments/assets/2a3be9d1-f6ea-4b7d-86b2-2428c2f0272c" />
+
+If we want to see the value of Id at one particular point 
+just press on it and left click
+
+
+### L1 SPICE Simulation for Lower Nodes
+
+We observed the Id VS Vd Curve 
+
+Now we will Observe at different Vd values 
+
+
+<img width="933" height="530" alt="image" src="https://github.com/user-attachments/assets/48f0f32f-c333-4dc2-980e-3cb75aa19353" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
