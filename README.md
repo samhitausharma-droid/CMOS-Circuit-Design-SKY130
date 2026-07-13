@@ -798,6 +798,51 @@ ANS: We keep the cursor on the slop and draw a tangent to the curve where the ta
 
 ### L1 MOSFET as a Switch
 
+<img width="606" height="341" alt="image" src="https://github.com/user-attachments/assets/00454fb7-5d21-4b32-a80b-8547d24e16cf" />
+
+We have spoken about this since lecture 1 , the image is self explanatory 
+
+<img width="395" height="369" alt="image" src="https://github.com/user-attachments/assets/3325cea6-b5d3-4ea4-9720-62eff941c140" />
+
+
+
+CMOS-COMPLIMENTARY MOSFET
+
+**WHY THIS NAME**
+ These transistors work in a complementary manner:
+ 
+  When the NMOS is ON, the PMOS is OFF.
+  When the PMOS is ON, the NMOS is OFF.
+
+ Vin is HIGH and is EQUAL to Vdd
+
+<img width="909" height="557" alt="image" src="https://github.com/user-attachments/assets/24f8fe71-a026-490e-9adb-de1b14587f4f" />
+
+PMOS is turned OFF and NMOS is turned ON
+
+### L2 Introduction to standard MOS voltage current parameters
+
+-Vgs<-Vth for a PMOS to be turned on 
+Vgs>Vth for a NMOS to be turned on 
+
+
+<img width="959" height="570" alt="image" src="https://github.com/user-attachments/assets/4a04196f-4755-4466-a27f-0c62a5502f97" />
+
+
+<img width="937" height="487" alt="image" src="https://github.com/user-attachments/assets/6307b943-8fbb-42dd-b54e-af1d09964561" />
+
+here we observe the direction of currents
+
+
+
+
+
+
+
+
+
+
+
 
 
 
