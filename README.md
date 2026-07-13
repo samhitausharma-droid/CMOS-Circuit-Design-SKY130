@@ -644,6 +644,181 @@ Now we will Observe at different Vd values
 
 
 
+We have drawn a line as the behavior of the nmos is diffrent in area 1 and area 2 
+
+<img width="1700" height="925" alt="ChatGPT Image Jul 13, 2026, 09_26_05 AM" src="https://github.com/user-attachments/assets/5faedc5b-765a-4b49-80cd-5c14acc05238" />
+
+
+In Area 1:The drain current is linear funtion of Vds 
+In Area 2:the drain current is function of 1+λVds
+
+
+<img width="949" height="547" alt="image" src="https://github.com/user-attachments/assets/bf12b9ad-a2bd-4b40-b395-8821887a70be" />
+
+Here we can see the different equations of linear and saturation region 
+
+
+We Plot the Id vs Vd curve for different values of W and L 
+W-0.375u AND L=0.25u   (W/L=1.5)
+
+
+<img width="695" height="349" alt="image" src="https://github.com/user-attachments/assets/f6b2a98a-41cc-422e-8c5c-05cc6d64325f" />
+
+Notice the (-) symbol there its because of the conventional current flow v/s flow of electrons
+
+Now we will see the difference between the two curves we plotted briefly
+
+<img width="958" height="585" alt="image" src="https://github.com/user-attachments/assets/204f762c-001d-4ab0-ad01-bc0133fdd6b3" />
+
+1)The saturation current is higher for the larger device (W = 1.8 μm, L = 1.2 μm).
+2)The spacing between adjacent saturation current levels is more uniform for the smaller device (W = 0.375 μm, L = 0.25 μm).
+3)Increasing the device width increases the saturation current and reduces the uniformity of the spacing between adjacent current levels.
+
+## L2: Drain Current vs Gate Voltage for Long and Short Channel Device
+
+For the long channel device the drain current at each and every gate voltage keeping Vds=2.5v has a "QUADRATIC DEPENDENCE"
+Here we observe that it does *NOT LINEARLY INCREASE* with Vgs
+
+We can see that the equations we have derived also suggests the same thing 
+<img width="959" height="527" alt="image" src="https://github.com/user-attachments/assets/432c0fcc-3041-44b4-a59e-d87f96a7eca6" />
+
+
+We can observe that for short channel device the drain current has *LINEAR DEPENDENCE*
+<img width="503" height="419" alt="image" src="https://github.com/user-attachments/assets/cd7f12dd-d235-4e98-97e2-538ec1a50f1a" />
+
+BUT WHY IS THIS HAPPENING ??
+ANS:  BECAUSE OF VELOCITY SATURATION EFFECT 
+
+WE WILL TRY TO PLOT THE GRAPH 
+
+The only difference is vary your Vgs from 0 to 2.5 at the step count of 0.1V and Vdd is swept from 0 to 2.5 
+
+SYNTAX: whatever is there in the left hand side will be sweeped or tuned at every value of what you see in the right hand side
+
+
+<img width="377" height="211" alt="image" src="https://github.com/user-attachments/assets/566e8503-5b6b-4644-9627-12f237047962" />
+
+
+
+If we plot the grpah for long chanel and short chanel
+
+<img width="959" height="481" alt="image" src="https://github.com/user-attachments/assets/5bb15ea2-f1ae-4b75-98c2-3714ff21de4d" />
+
+image 1: Short Channel: if we observe it the ID is increasing linearly 
+image 2: long channel : if we obsereve it the ID has QUADRATIC DEPENDENCE
+
+
+### L3 Velocity Saturation under Low and High Electric Fields
+
+We can clearly observe the difference between long channel and short channel nmos
+
+<img width="959" height="557" alt="image" src="https://github.com/user-attachments/assets/00604aee-acb2-4697-bcc7-75c01d638f51" />
+
+VELOCITY SATURATION EFFECT
+
+- At low electric fields, the carrier velocity increases almost linearly with the electric field, following the relation **velocity ∝ electric field**.
+- As the electric field becomes very high, the carriers reach a maximum velocity called the **saturation velocity** and cannot accelerate further.
+- This phenomenon is known as the **velocity saturation effect**, and it becomes significant in short-channel MOSFETs, limiting the drain current.
+
+  
+<img width="850" height="390" alt="image" src="https://github.com/user-attachments/assets/d2fe4659-2079-48a1-833b-ac4ad12f3797" />
+
+<img width="923" height="452" alt="image" src="https://github.com/user-attachments/assets/7d2a482c-a06c-4580-916d-9d05f323c140" />
+
+
+<img width="941" height="521" alt="image" src="https://github.com/user-attachments/assets/5c8b9345-0728-4ff1-93e7-13dde14d81a1" />
+
+<img width="267" height="65" alt="image" src="https://github.com/user-attachments/assets/d9e68fe9-f254-43da-9f09-1d0322466c78" />
+
+At continuity point we take e=ec 
+<img width="267" height="65" alt="image" src="https://github.com/user-attachments/assets/1e6f917a-cf4c-4d28-9426-b70bac7d8596" />
+
+that brings us with this equation 
+<img width="316" height="92" alt="image" src="https://github.com/user-attachments/assets/76828ce0-859f-4d3e-8f97-4259b4b0846d" />
+
+Re deriving the Drain Current Model
+
+<img width="941" height="436" alt="image" src="https://github.com/user-attachments/assets/72ca2f12-1bbb-41bc-a1b7-aa74ae633ac4" />
+
+The equation becomes TOO COMPLEX to handle 
+
+### L4 Drain Current Model under Velocity Saturation
+
+<img width="953" height="548" alt="image" src="https://github.com/user-attachments/assets/d4887232-6db5-4af3-853b-f57b83a84ff6" />
+
+whichever is minimum we can substitute and get the drain current equation 
+
+
+***Vdsat is a technology parameter***
+<img width="606" height="143" alt="image" src="https://github.com/user-attachments/assets/550c5c27-0b87-44a9-a647-00de0a35be41" />
+
+IF THE DEVICE IS OPERATING IN SATURATION REGION 
+<img width="925" height="485" alt="image" src="https://github.com/user-attachments/assets/4d56297e-9874-43bf-8e9d-28508f008ecc" />
+
+IF THE DEVICE IS OPERATING IN THE RESISTIVE REGION
+<img width="929" height="494" alt="image" src="https://github.com/user-attachments/assets/8ba411c4-1d17-4e82-9f80-56cd0999f267" />
+
+ IF THE DEVICE IS OPERATING IN THE SATURATION REGION (***ONLY FOR SHORT CHANNEL***)
+ <img width="923" height="536" alt="image" src="https://github.com/user-attachments/assets/c1a23bae-887d-48fa-adaa-828836f3236e" />
+
+
+When we move from higher values of the device to the lower values of the device the velocity saturation causes the device to saturate early
+making the peak current for the same W/L ratio is different 
+
+<img width="959" height="552" alt="image" src="https://github.com/user-attachments/assets/2a0d48b0-d895-413d-b7bb-72f1e01f6122" />
+
+The peak current value is 400uamp and 200 micro-amp repectively
+
+### L5 SKY130 Lab: Id–VGS Characteristics
+
+<img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/c6726c69-c823-4cdb-9de4-80d3a9d29a22" />
+
+**ID VS VDS**
+
+<img width="959" height="518" alt="image" src="https://github.com/user-attachments/assets/58082889-a54d-4c92-9701-e89a6d6081ac" />
+Here we can see the quadratic and linear region clearly 
+
+Now we are going to observe 
+**ID VS VGS**
+
+<img width="959" height="528" alt="image" src="https://github.com/user-attachments/assets/b62be54a-2978-4128-83b2-2c1184173640" />
+
+Here we are keeping VDS constant  1.8V and we are sweeping only Vgs value till 1.8V with step of 0.1
+
+<img width="959" height="540" alt="image" src="https://github.com/user-attachments/assets/5a281990-d295-4492-80d4-1bb463da020d" />
+
+HOW TO CALCULATE VTH IN ID VS VGS CURVE
+ANS: We keep the cursor on the slop and draw a tangent to the curve where the tangent touches the x-axis that is the value of the VTH
+
+<img width="848" height="482" alt="image" src="https://github.com/user-attachments/assets/edda9b97-5292-4a0e-a184-080c56d97de8" />
+
+**it comes somwhere around 0.77**
+
+## CMOS Voltage Transfer Characteristics (VTC)
+
+### L1 MOSFET as a Switch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
