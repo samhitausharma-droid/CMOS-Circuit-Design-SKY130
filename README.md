@@ -834,6 +834,313 @@ Vgs>Vth for a NMOS to be turned on
 here we observe the direction of currents
 
 
+### L3 PMOS/NMOS drain current v/s drain voltage
+
+We are going to see few relations for the NMOS region 
+
+***In NMOS region Vss is connected to the GROUND***
+
+<img width="350" height="175" alt="image" src="https://github.com/user-attachments/assets/99f6cbae-ee7a-4e2a-ac7e-d80ea8bafc11" />
+
+
+<img width="405" height="177" alt="image" src="https://github.com/user-attachments/assets/c847bb05-f38f-47cb-aac2-d2c7106dcbc7" />
+
+
+***FOR PMOS REGION***
+
+<img width="359" height="320" alt="image" src="https://github.com/user-attachments/assets/7bbdce68-0020-4c57-82bb-a5651bf6e6a2" />
+
+<img width="245" height="98" alt="image" src="https://github.com/user-attachments/assets/27a94a7b-523e-4fa9-92d9-e4231d0ad82a" />
+
+
+***MOST IMPORTANT OBSERVATION***
+
+<img width="214" height="143" alt="image" src="https://github.com/user-attachments/assets/87f2d737-9473-45fe-8c60-60f8d4f66c9e" />
+
+
+
+**NMOS VS PMOS IdsN VS VdsN**
+
+<img width="646" height="357" alt="image" src="https://github.com/user-attachments/assets/4cf64ac2-38c2-4494-9f2f-e5fc837e4b61" />
+
+
+### L4 Step1 – Convert PMOS gate-source-voltage to Vin
+
+We have tons of voltages but if we try to look at the invertor in the logic point of view we can only see Vin and Vout 
+
+So there should be some way to identify the volatage and the current curves in such a fasion that they are only the function of **Vin and Vout**
+
+Steps to obtain Voltage-Transfer Characterstics(VTC) for Static CMOS Inverter 
+
+ASSUMPTION  :   Vdd=2V AND ITS A LONG CHANNEL DEVICE 
+
+**We are actually converting everything in terms of Vin and Vout**
+
+<img width="959" height="534" alt="image" src="https://github.com/user-attachments/assets/ab068d22-1abd-4adb-8955-67ca434acba4" />
+
+
+
+**Now we try to convert everything to IdsN VIn**
+
+
+<img width="650" height="545" alt="image" src="https://github.com/user-attachments/assets/0fc37d25-eb51-46e8-af2e-8dc7038f87af" />
+
+
+
+### L5 Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
+
+When you say Vout=0V it basically says that the output capacitor is completely  discharged and we need to charge 
+the capacitor
+
+
+<img width="959" height="383" alt="image" src="https://github.com/user-attachments/assets/0b125b0d-22f0-4260-898a-547a76ef5522" />
+
+**This is only TRUE FOR PMOS IS CLUBED WITH NMOS TO FORM CMOS**
+
+**LOAD CURVE FOR PMOS TRANSISTOR**
+
+<img width="341" height="339" alt="image" src="https://github.com/user-attachments/assets/500ebf17-65e2-401e-a9b8-9b8bf063f15a" />
+
+Deriving the load curve for NMOS is easier 
+
+<img width="945" height="584" alt="image" src="https://github.com/user-attachments/assets/e8b6c37d-ebe8-4a7d-8e92-1aca7756f243" />
+
+The final step is to get the voltage transfer characterstics for the CMOS transister 
+
+We achieve that by taking both the load curves of NMOS and PMOS together 
+
+
+<img width="959" height="493" alt="image" src="https://github.com/user-attachments/assets/be805d72-ef11-4e41-b404-9e73605404b5" />
+
+
+
+### L6 Step4 – Merge PMOS – NMOS load curves and plot VTC
+
+We will superimpose the LOAD CURVE of NMOS and PMOS
+BUT WHY????
+
+   Because the Vin and Vout are common to NMOS and PMOS , graphically it should be the intersection point of the NMOS and PMOS 
+
+For eg:  If Vin=0V
+
+<img width="689" height="305" alt="image" src="https://github.com/user-attachments/assets/ad8c59ff-d0dd-4e7d-971b-f4a47e0560fb" />
+
+take the intersection point or the common point of the corresponding load lines to plot the graph
+
+<img width="607" height="271" alt="image" src="https://github.com/user-attachments/assets/2a60dce6-d86e-4582-b32c-980d6d8c1483" />
+
+The point is in the LINEAR REGION (pmos is in the linear region)
+
+
+Now if we combine both the load curves and plot the graph  we get 
+
+<img width="959" height="298" alt="image" src="https://github.com/user-attachments/assets/0fcbf2f8-9ea3-430b-931e-a9e623d66678" /> 
+
+
+<img width="290" height="199" alt="image" src="https://github.com/user-attachments/assets/263a8db7-4f2c-490e-adaa-629322b3992f" />
+
+
+
+### L1 SPICE deck creation for CMOS inverter
+
+First we need to create the SPICE deck
+
+Then we need define the W/L ratio of PMOS and NMOS 
+
+**GENERALLY W/L ratio of PMOS must be GREATER than NMOS**
+
+We will assume the values of Cload=10uF ,Vdd=2.5V ,Vin=2.5V
+
+Now we will identify the Nodes
+
+<img width="457" height="346" alt="image" src="https://github.com/user-attachments/assets/b84dd9e1-90d8-4948-9c73-bdbc26edd3c7" />
+
+<img width="959" height="590" alt="image" src="https://github.com/user-attachments/assets/d3c6c013-f7c7-4074-b7b9-660346c96614" />
+
+PMOS lies between (DRAIN,GATE,SOURCE,SUBSTRATE)
+
+Drain terminal is connected to the OUT
+Gate terminal is connected to the IN 
+Source and Subtrate are connected to Vdd
+
+
+### L2 SPICE simulation for CMOS inverter
+
+For NMOS transistor
+
+<img width="728" height="335" alt="image" src="https://github.com/user-attachments/assets/84631446-49cf-4a59-9bef-0d1e607db50c" />
+
+
+For Output load Capacitor,Supply Voltage and Vin
+
+
+<img width="843" height="363" alt="image" src="https://github.com/user-attachments/assets/74a31826-b990-43f4-b396-c0fe523ace48" />
+
+Simulation Commands
+
+**here the model file is very important as it contains the complete description of NMOS and PMOS***
+
+
+<img width="507" height="182" alt="image" src="https://github.com/user-attachments/assets/8ccae022-d7d1-41c9-a566-1b1f968e351b" />
+
+
+We will do the  spice simulation for :
+
+SPICE waveform : Wn = Wp = 0.375u, Ln,p = 0.25u device  (Wn/Ln = Wp/Lp = 1.5)
+
+
+Now we will open the model file 
+
+
+<img width="690" height="503" alt="image" src="https://github.com/user-attachments/assets/0c50d7d6-aa24-4c73-9f1d-eca4cc1c1370" />
+
+We we can see the model NMOS and the technology parameters defined 
+
+
+
+Similarly we have PMOS and all the technology parameters defined
+
+
+<img width="437" height="211" alt="image" src="https://github.com/user-attachments/assets/3bc2c352-39ab-4208-b9ea-70ad69ac868d" />
+
+This is the NETLIST we had defined before
+
+
+<img width="368" height="253" alt="image" src="https://github.com/user-attachments/assets/d06da6b1-da4e-4597-8da7-b299373dddd4" />
+
+Now if we plot the graph we get 
+
+
+<img width="594" height="484" alt="image" src="https://github.com/user-attachments/assets/94efd302-18bd-450e-bc84-83663b3dccc9" />
+
+Now we have increased the PMOS width of the transistor
+
+SPICE waveform : Wn = 0.375u, Wp = 0.9375u, Ln,p = 0.25u device  (Wn/Ln = 1.5, Wp/Lp = 2.5)
+
+<img width="448" height="326" alt="image" src="https://github.com/user-attachments/assets/05420496-402e-4099-a076-53f626d61888" />
+
+if we plot the graph 
+
+<img width="578" height="469" alt="image" src="https://github.com/user-attachments/assets/3dfa8af4-e386-4e48-883c-14e982169d5a" />
+
+### L3 Labs Sky130 SPICE simulation for CMOS
+
+
+<img width="959" height="540" alt="image" src="https://github.com/user-attachments/assets/3063f044-cbf8-4171-9178-c484bd0f7542" />
+
+
+<img width="589" height="434" alt="image" src="https://github.com/user-attachments/assets/f35bef83-3f56-4b34-bcfe-9ba529b45c4e" />
+
+
+<img width="952" height="535" alt="image" src="https://github.com/user-attachments/assets/708f5fa3-bf4f-4f65-a6a6-fc3fa9a42ced" />
+
+To plot Switching Threshold 
+
+Keep Zooming into the curve we will get the switching threshold at around 0.87
+
+
+<img width="169" height="43" alt="image" src="https://github.com/user-attachments/assets/711833ca-f997-4f47-85ba-0fab5dcb6137" />
+
+for transient analysis 
+
+
+<img width="959" height="535" alt="image" src="https://github.com/user-attachments/assets/1da34618-0eaf-4ac4-8d17-f227609ef478" />
+
+
+<img width="959" height="490" alt="image" src="https://github.com/user-attachments/assets/8751c8d3-8bba-4465-96c2-1aa2a6cfbacd" />
+
+
+<img width="832" height="500" alt="image" src="https://github.com/user-attachments/assets/a54c0590-423c-4874-a83a-a65c0274233e" />
+
+For rise delay we need to consider the area shown 
+
+
+<img width="856" height="482" alt="image" src="https://github.com/user-attachments/assets/2a624543-70b0-4ba6-9141-ef37b9c1af72" />
+
+
+<img width="215" height="60" alt="image" src="https://github.com/user-attachments/assets/41948025-f6d2-4439-bdb0-3a7c0d0de4fc" />
+
+**Rise delay = 2.482ns-2.15ns = 0.333ns**
+
+For Fall Delay
+
+<img width="524" height="259" alt="image" src="https://github.com/user-attachments/assets/cd6ba46e-7154-42c3-a3ef-1c5807972de1" />
+
+
+<img width="222" height="43" alt="image" src="https://github.com/user-attachments/assets/0e786f88-0776-4fb6-b5f1-8105ea3bd930" />
+
+
+**Fall Delay = 4.334ns-4.050ns = 0.285ns**
+
+
+###  L1 Switching Threshold, Vm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
