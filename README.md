@@ -1075,7 +1075,44 @@ For Fall Delay
 
 ###  L1 Switching Threshold, Vm
 
+Let us compare the two waveforms
 
+SPICE waveform : Wn = Wp = 0.375u, Ln,p = 0.25u device (Wn/Ln = Wp/Lp = 1.5)    and SPICE waveform : Wn = 0.375u, Wp = 0.9375u,Ln,p = 0.25u device (Wn/Ln = 1.5, Wp/Lp = 3.75)      
+
+
+<img width="959" height="578" alt="image" src="https://github.com/user-attachments/assets/5ed6a72e-61cc-4b0f-9a88-a5b74c5ac49f" />
+
+**Switching Threshold : Point at which the device switches**
+
+
+This will define the **ROBUSTNESS** of the of the CMOS Inverter
+
+Vm is the point where Vin  = Vout 
+
+
+<img width="909" height="512" alt="image" src="https://github.com/user-attachments/assets/473ecc9e-d5cd-45e3-87f6-11e2ecd10cb4" />
+
+these are the area wherein the PMOS and NMOS both are in saturation region 
+
+
+**Vgs=Vds
+Vgs>>>>>Vth**
+
+
+<img width="959" height="598" alt="image" src="https://github.com/user-attachments/assets/71d293a5-4d83-4c07-96ef-408a52b161fa" />
+
+
+### L2 Analytical expression of Vm as a function of (W/L)p and (W/L)n
+
+
+
+
+
+
+
+
+
+ 
 
 
 
