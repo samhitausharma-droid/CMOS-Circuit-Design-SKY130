@@ -1104,6 +1104,23 @@ Vgs>>>>>Vth**
 
 ### L2 Analytical expression of Vm as a function of (W/L)p and (W/L)n
 
+We will calculate the Vm with respect to the NMOS and PMOS width and length
+
+
+<img width="959" height="559" alt="image" src="https://github.com/user-attachments/assets/f77c0b1d-3c11-4659-8fb1-2090d8df1874" />
+
+<img width="339" height="86" alt="image" src="https://github.com/user-attachments/assets/bbf3c2e1-a4e0-4711-bdcd-9ef0a3b0832c" />
+
+<img width="556" height="143" alt="image" src="https://github.com/user-attachments/assets/7fcf6eb1-3d22-4613-b5b1-6224e1eef200" />
+
+
+
+### L3 Analytical expression of (W/L)p and (W/L)n as a function of Vm
+
+
+
+
+
 
 
 
