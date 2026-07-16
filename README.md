@@ -1117,6 +1117,95 @@ We will calculate the Vm with respect to the NMOS and PMOS width and length
 
 ### L3 Analytical expression of (W/L)p and (W/L)n as a function of Vm
 
+If we want the trasistor to switch exactly at 1.25V ie half of power supply 
+what W/L ratio of PMOS and NMOS will we get
+
+
+<img width="908" height="539" alt="image" src="https://github.com/user-attachments/assets/b7eba775-850c-4668-a6f7-3515f6bcf37b" />
+
+
+take the   VDSATN and VDSATP common from both 
+
+
+<img width="665" height="75" alt="image" src="https://github.com/user-attachments/assets/ee6ece9d-2154-4d2a-9444-ea9af99d67e8" />
+
+
+
+
+Now we will derive everything in the terms of Kp and Kn 
+
+<img width="346" height="134" alt="image" src="https://github.com/user-attachments/assets/36b36e71-2175-4fbb-aeda-71aec6783ca2" />
+
+expanding the Kp and Kn
+
+<img width="346" height="80" alt="image" src="https://github.com/user-attachments/assets/cdeee220-2576-4670-aee5-ea802e464b9e" />
+
+
+How much grater should PMOS be than NMOS
+
+<img width="399" height="69" alt="image" src="https://github.com/user-attachments/assets/2e075284-c4d1-48a9-bf46-658f68cda616" />
+
+
+We will see the behavior of CMOS for different values of W/L ratio of PMOS and NMOS
+
+<img width="220" height="171" alt="image" src="https://github.com/user-attachments/assets/0cb3dca6-20c3-479d-b132-ba6e0f8ce1c3" />
+
+
+###  L4 Static and dynamic simulation of CMOS inverter
+
+
+We will do dynamic simulation 
+
+basically the input we will be providing will be a pulse 
+
+and simulation command will be transient analysis 
+
+<img width="689" height="426" alt="image" src="https://github.com/user-attachments/assets/1cc2d7f2-9e35-4735-8571-e225339ecc13" />
+
+What is a pulse in SPICE DECK??
+   <img width="926" height="444" alt="image" src="https://github.com/user-attachments/assets/e46caba4-7c8d-4568-80fa-ce66306ef2a3" />
+
+
+We are doing a transient analysis 
+
+<img width="436" height="132" alt="image" src="https://github.com/user-attachments/assets/b9e66766-c116-4a20-a3fe-2bb00df4bb4c" />
+
+
+To identify the timing delay
+
+we use the difference between the rising delay and the falling delay
+
+<img width="578" height="471" alt="image" src="https://github.com/user-attachments/assets/59d5a653-315a-4d4f-9bc5-2fd537797b1c" />
+
+We can also calculate the rise and fall delay for by using transient analysis which we did before
+
+<img width="521" height="230" alt="image" src="https://github.com/user-attachments/assets/29880ee8-d853-40bd-9cd5-8b5f7e104932" />
+
+
+### L5 Static and Dynamic simulation of CMOS inverter with increased PMOS width
+
+Now we will be doing SPICE SIMULATION for increase width of PMOS and compare the results 
+
+<img width="590" height="261" alt="image" src="https://github.com/user-attachments/assets/6707c829-d967-4ef5-adce-6215fe38a9cc" />
+
+<img width="603" height="250" alt="image" src="https://github.com/user-attachments/assets/1a934781-97e4-4895-b790-247d9ef09e59" />
+
+<img width="601" height="231" alt="image" src="https://github.com/user-attachments/assets/aef266ee-b61d-4b3e-906c-cc4f6d529350" />
+
+<img width="602" height="232" alt="image" src="https://github.com/user-attachments/assets/71cf02e2-ca0c-4f85-bff2-3113bbb961e9" />
+
+***The rise delay decreases with an increase in PMOS width because a wider PMOS transistor can source more current and has lower on-resistance. This enables the output capacitor to charge faster, thereby reducing the low-to-high transition time***
+
+
+
+
+
+
+
+
+
+
+
 
 
 
