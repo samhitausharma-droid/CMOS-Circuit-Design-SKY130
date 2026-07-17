@@ -59,7 +59,7 @@ This repository documents my learning and implementation of CMOS circuit design 
   - [L3 Analytical Expression of (W/L)p and (W/L)n as a Function of Vm](#l3-analytical-expression-of-wlp-and-wln-as-a-function-of-vm)
   - [L4 Static and Dynamic Simulation of CMOS Inverter](#l4-static-and-dynamic-simulation-of-cmos-inverter)
   - [L5 Static and Dynamic Simulation of CMOS Inverter with Increased PMOS Width](#l5-static-and-dynamic-simulation-of-cmos-inverter-with-increased-pmos-width)
-  -  [L6 Applications of CMOS Inverter in Clock Network and STA](#l6-applications-of-cmos-inverter-in-clock-network-and-sta)
+  - [L6 Applications of CMOS Inverter in Clock Network and STA](#l6-applications-of-cmos-inverter-in-clock-network-and-sta)
 
 - **Static Behaviour Evaluation – CMOS Inverter Robustness (Noise Margin)**
   - [L1 Introduction to Noise Margin](#l1-introduction-to-noise-margin)
